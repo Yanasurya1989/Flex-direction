@@ -1,6 +1,6 @@
 .container {
     width: 500px;
-    height: 150px;
+    height: 200px;
     border: 1px solid black;
     box-sizing: border-box;
     display: flex;
@@ -20,6 +20,16 @@
     flex: 1;
 }
 
+.container div.satu {
+    flex: 2;
+    align-self: flex-start;
+}
 .container div.dua {
     flex: 4;
+    align-self: flex-end;
+}
+
+.container div.tiga {
+    flex: 3;
+    align-self: center;
 }
