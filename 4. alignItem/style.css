@@ -1,0 +1,108 @@
+.alignItem {
+    width: 500px;
+    height: 200px;
+    border: 3px solid black;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.alignItem div {
+    background-color: brown;
+    width: 100px;
+    margin: 5px;
+}
+
+.flexEnd {
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    box-sizing: border-box;
+}
+
+.flexEnd div {
+    background-color: gold;
+    width: 100px;
+    margin: 5px;
+}
+
+.midelling {
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.midelling div {
+    background-color: blue;
+    width: 100px;
+    margin: 5px;
+}
+
+.strech {
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    /* untuk proses strech komponen jangan diberi height */
+    box-sizing: border-box;
+}
+
+.strech div {
+    background-color: magenta;
+    width: 100px;
+    margin: 5px;
+}
+
+.baseline {
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    box-sizing: border-box;
+}
+
+.baseline div {
+    background-color: salmon;
+    width: 100px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.baseline div.tiga {
+    font-size: 60px;
+}
+
+.baseline div.satu {
+    font-size: 50px;
+}
+
+.satu{
+    height: 50px;
+}
+
+.dua{
+    height: 150px;
+}
+.tiga{
+    height: 100px;
+}
+.empat{
+    height: 130px;
+}

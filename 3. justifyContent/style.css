@@ -28,5 +28,68 @@
     height: 100px;
     background-color: aqua;
     margin: 5px;
-    justify-content: flex-end;
+}
+
+.center {
+    width: 500px;
+    height: 150px;
+    border: 3px solid black;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.center div {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    margin: 5px;
+}
+
+.spacebetween {
+    width: 500px;
+    height: 150px;
+    border: 3px solid black;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.spacebetween div {
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    margin: 5px;
+}
+
+.spacearound {
+    width: 500px;
+    height: 150px;
+    border: 3px solid black;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.spacearound div {
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    margin: 5px;
+}
+
+.spaceevenly {
+    width: 500px;
+    height: 150px;
+    border: 3px solid black;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.spaceevenly div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 5px;
 }
