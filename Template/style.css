@@ -1,0 +1,60 @@
+.container {
+    width: 500px;
+    /* height: 200px; hilangkan ini jika child menggunakan float */
+    border: 3px solid #000000;
+    margin: 30px auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.container::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.container div {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    float: left;
+    margin: 5px;
+}
+
+/* Style untuk flex */
+.conflex {
+    width: 600px;
+    height: 150px;
+    border: 3px solid black;
+    display: flex;
+    /* flex-direction: column-reverse;
+    flex-direction: row-reverse;
+    flex-direction: row; */
+    flex-direction: column;
+    padding: 5px;
+}
+
+.conflex div{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    margin: 5px;
+}
+
+/* Style untuk flexwrap */
+.conflexwrap {
+    width: 400px;
+    height: 150px;
+    border: 3px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-wrap: wrap-reverse; */
+    padding: 5px;
+}
+
+.conflexwrap div{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 5px;
+}
