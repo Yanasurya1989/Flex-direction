@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:'Montserrat' ,sans-serif;
+
+    /* untuk menyembunyikan nav ul pada hamburger menu ketika layar mobile */
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    background-color: rgb(189, 127, 248);
+    justify-content: space-around;
+    
+    /* padding: 20px 0; proses centering diganti dengan menggunakan align item*/
+    color: rgb(232, 212, 252);
+    letter-spacing: 3px;
+    height: 50px;
+    align-items: center;
+}
+
+nav .logo {
+    font-family: 'Pacifico', cursive;
+}
+
+nav ul {
+    display: flex;
+    /* menghilangkan dot pada list */
+    list-style: none;
+    justify-content: space-between;
+    width: 40%;
+    /* background-color: black; */
+}
+
+nav ul li a{
+    color: rgb(232, 212, 252);
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+nav ul li a:hover{
+    color: rgb(239, 229, 248);
+}
+
+/* Hamburger menu animation */
+.menu-toggle span:nth-child(2){
+    /* kode diatas dibaca child(anak kedua) dari parent dg nama menu toggle (input termasuk child juga sehingga span paling atas adalah child kedua krn berada dibawah input*/
+    /* background-color: red; */
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg);
+    background-color: white;
+    /* transform: rotate(-45deg) translate(-1px, 0); */
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    /* kode diatas dibaca: ketika ada input didalam menu toggle diceklist maka cari sibling yg merupakan saudara kandung(berarti semua yg berada didalam class menu toggle) dan berada diposisi anak kedua*/
+    /* background-color: red; */
+    transform: rotate(45deg);
+    background-color: white;
+    /* transform: rotate(45deg) translate(-1px, -1px); */
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: scale(0);
+    opacity: 0;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    /* background-color: black; */
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 41px;
+    height: 25px;
+    left: -8px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: rgb(232, 212, 252);
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Responsive breakpoint */
+
+/* ukuran tablet */
+@media screen and (max-width: 768px){
+    nav ul {
+        width: 70%;
+    }
+}
+
+
+/* ukuran mobile */
+@media screen and (max-width: 576px){
+    .menu-toggle {
+        display: flex;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(189, 127, 248);
+        width: 80%;
+        z-index:-1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
