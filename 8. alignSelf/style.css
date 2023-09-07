@@ -6,11 +6,14 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    align-items: stretch;
 }
 
 .container div {
     width: 100px;
-    height: 100px;
+    /* height: 100px; */
+    /* ketika align-item stretch maka yang diberi align self tidak terstretch */
+    align-items: stretch;
     background-color: aqua;
     margin: 5px;
     display: flex;

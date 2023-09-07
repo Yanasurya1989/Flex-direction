@@ -1,0 +1,173 @@
+/* seting style secara primary */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ddd;
+    /* mengatur jarak antar baris */
+    line-height: 1.65;
+    padding-bottom: 1000px;
+}
+
+.container-satu {
+    width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    /* agar warna putihnya tidak melebar krn pengaruh margin dan padding seting boz sizingnya */
+    box-sizing: border-box;
+
+    /* agar semua komponen (main, sidebar-satu, sidebar-dua berada dalam satu baris */
+    display: flex;
+}
+
+.kolom-utama {
+    /* mengatur lebar komponen */
+    flex-grow: 3;
+
+    /* mengatur posisi komponen */
+    order: 2;
+}
+
+.sidebar-satu {
+    flex-grow: 1;
+    order: 1;
+}
+
+.sidebar-dua {
+    flex-grow: 1;
+    order: 2;
+}
+
+/* latihan 2 */
+.container-dua {
+    /* atur lebar layar agar responsive pada layar lebih kecil, dengan menentukan maximal widthnya (max-width), dgn menggunakan width lebar menjadi static dan ada scrolling ketika kondisi layar lebih kecil */
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.layanan {
+    padding: 20px;
+    /* agar lebar card tidak terubah oleh padding */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.layanan.satu {
+    background-color: rgba(0, 0, 255, 0.452);
+}
+
+.layanan.dua {
+    background-color: rgba(0, 255, 13, 0.452);
+}
+
+.layanan.tiga {
+    background-color: rgba(255, 0, 21, 0.452);
+}
+
+/* latihan 3 */
+
+.container-tiga {
+    /* max-width utk responsive */
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+    /* agar list gambar pindah baris ketika containernya tidak cukup */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* agar menampilkan empat gambar dalam satu baris */
+.thumbnail {
+    width: 50%;
+}
+
+/* agar gambar yang sudah sejajar tetap menyeseuaikan lebar container komponen lain(tidak terjadi scroll pinggir) */
+.thumbnail img {
+    width: 100%;
+}
+
+/* latihan 4 */
+
+.container-empat {
+    width: 800px;
+    margin: 50px auto;
+    display: flex;
+}
+
+.card {
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    background-color: #eee;
+    /* untuk */
+    overflow: hidden;
+    margin: 10px;
+    flex: 1;
+}
+
+.card.besar {
+    transform: scale(1.12);
+}
+
+.card .header {
+    height: 150px;
+    background-color: #666;
+}
+
+.card .content {
+    text-align: center;
+    padding: 20px;
+}
+
+/* latihan 5 */
+.container-lima {
+    width: 500px;
+    height: 500px;
+    border: 5px solid black;
+    margin: 50px auto;
+
+    /* middeling posisi kotak, containernya flex kemudian kotaknya set margin:auto */
+    display:flex
+
+}
+
+.kotak {
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    color: white;
+
+    /* middeling posisi tulisan */
+    /* text-align: center;
+    line-height: 100px; ini tidak lagi diperlukan karna akan menggunakan cara yang sama seperti yang dilakukan pada proses mideling kotak karena dengan cara ini ketika tulisan lebih dari satu baris posisinya tidak akan midle lagi*/
+    display: flex;
+
+    /* ketika tulisan lebih dari satu baris akan tetap membutuhkan text align center */
+    text-align: center;
+
+    /* middeling posisi kotak, tapi containernya harus diset display:flex */
+    margin: auto;
+}
+
+.kotak span {
+    margin: auto;
+}
+
+/* Responsive */
+@media( min-width: 600px ){
+    .container-dua {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .layanan {
+        width: 30%;
+    }
+
+    .thumbnail {
+        width: 25%;
+    }
+}
